@@ -1,0 +1,24 @@
+<section class="client-sec">
+    <div class="container container-resp">
+        <h2 class="text-center">Our Clients</h2>
+        <div class="owl-carousel owl-theme">
+            <?php if( have_rows('home_logo_slider') ): ?>
+            <?php while ( have_rows('home_logo_slider') ) : the_row(); ?>
+            <div class="item">
+                <div class="video-col">
+                    <div class="placeholder-img">
+                        <img src="<?php the_sub_field('home_logo_image_1'); ?>" alt="">
+                    </div>
+                    <div class="placeholder-img">
+                        <img src="<?php the_sub_field('home_logo_image_2'); ?>" alt="">
+                    </div>
+                </div>
+            </div>
+            <?php 
+            wp_reset_postdata();
+            endwhile; ?>
+            <?php else : ?> 
+            <?php endif; ?>
+        </div>
+    </div>
+</section>
